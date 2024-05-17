@@ -117,9 +117,6 @@ pre.mermaid_code {
   background-color: #270b0bdc !important;
   color: white;
 }
-.result_box {
-  width: 80%;
-}
 
 @media (prefers-color-scheme: dark) {
   html {

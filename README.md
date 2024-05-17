@@ -24,3 +24,6 @@
 - 이 때 먼저 새로 생성된 프로젝트 폴더에서 터미널을 열고 `rm -rf .git` 명령을 실행한다.
 - 새로 생성된 프로젝트 폴더를 다른 이름으로 변경한다.
 - 그리고 `root` 에서 다시 gitjub 에 add, push 를 실행하면 정상적으로 프로젝트 폴더가 업로드된다
+
+- npm install mermaid
+- npm install next-auth

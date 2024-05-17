@@ -7,6 +7,7 @@ export default function Home() {
   const text_gen_text = () => {
     text_generation("");
   };
+
   return (
     <main className={styles.main}>
       <InputPage />
