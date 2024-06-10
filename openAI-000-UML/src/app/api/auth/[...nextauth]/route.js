@@ -13,10 +13,10 @@ const Handler = NextAuth({
     CredentialsProvider({
       name: "Email and Password",
       credentials: {
-        email: {
-          label: "이메일",
-          type: "email",
-          placeholder: "이메일을 입력하세요",
+        id: {
+          label: "아이디",
+          type: "id",
+          placeholder: "아이디를 입력하세요",
         },
         password: {
           label: "비밀번호",
@@ -24,15 +24,21 @@ const Handler = NextAuth({
           placeholder: "비밀번호를 입력하세요",
         },
       },
-      async authorize(_, req) {
+      async authorize(credentials) {
         const user = {
           id: "1",
           name: "tory",
           email: "tory@tory.com",
           password: "1234",
         };
-        if (user) return user;
-        else return null;
+        const { id, password } = credentials;
+        if (user.id === id && user.password === password) {
+          console.log("로그인ㅇㅋ");
+          return { ...user };
+        } else {
+          console.log("로그인ㄴㄴ");
+          throw new Error("CredentialsSignin");
+        }
       },
     }),
   ],

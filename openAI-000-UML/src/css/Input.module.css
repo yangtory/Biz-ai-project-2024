@@ -1,5 +1,6 @@
 .form {
-  width: 60%;
+  flex: 1;
+  height: 100%;
   margin: 10xp auto;
   padding: 20px;
   border: 1px solid #ccc;
@@ -26,4 +27,23 @@
 
 .diagram option[value="none"] {
   color: #dd4f4f;
+}
+
+.btn_create:hover {
+  background-color: #ddd;
+  cursor: pointer;
+}
+
+.mainPage {
+  display: flex;
+  gap: 1rem;
+}
+
+.resultBox {
+  flex: 1;
+  height: 100%;
+  margin: 10xp auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
 }

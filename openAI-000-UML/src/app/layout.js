@@ -1,8 +1,8 @@
 import { Inter } from "next/font/google";
 import "@/css/globals.css";
 import css from "@/css/page.module.css";
-import Link from "next/link";
 import AuthProvider from "./comps/AuthProvider";
+import AuthButtons from "./comps/AuthButtons";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,8 +18,7 @@ export default function RootLayout({ children }) {
         <AuthProvider>
           <header className={css.header}>
             <h1>AI UML Generater</h1>
-
-            <Link href="/login">로그인</Link>
+            <AuthButtons />
           </header>
           {children}
         </AuthProvider>
